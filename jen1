@@ -2,4 +2,13 @@ pipeline {
     agent any
 
     stages {
-stage(
+stage('Build'){
+steps{
+echo "compiling"
+sh "javac Plant.java"
+echo "excecuting"
+sh "java Plant"
+}
+}
+}
+}
